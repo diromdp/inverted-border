@@ -1,0 +1,266 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+body {
+    @apply bg-[#DFE3F2];
+}
+
+.container {
+    @apply max-w-[1650px] mx-auto py-[16px];
+}
+
+.status {
+    @apply flex flex-row gap-[74px];
+    &_budge {
+        @apply relative max-w-[500px];
+        &__title {
+            @apply p-[16px] bg-[#DFE3F2] rounded-[58px];
+            bottom: -20px;
+            position: relative;
+            z-index: 9;
+            width: fit-content;
+            left: 24%;
+            .bugde {
+                @apply bg-[#1E202E] font-semibold text-[16px] text-white py-[10px] px-[20px] rounded-[58px] uppercase max-w-[250px] mx-auto text-center;
+            }
+        }
+
+        &__desc {
+            background: rgba(255, 255, 255, 0.7); /* Semi-transparent white */
+            backdrop-filter: blur(44px); /* Blur effect */
+            -webkit-backdrop-filter: blur(44px); /* For Safari */
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+            @apply w-[500px] pt-[20px] pb-[30px] px-[70px] flex flex-col justify-center items-center rounded-[40px];
+            h4 {
+                @apply text-[#009EFF] font-bold text-[32px] mb-[0px];
+            }
+            span {
+                @apply text-[#1E202E] text-[14px];
+            }
+        
+        }
+    }
+    &_table {
+        @apply relative;
+        .information {
+            @apply relative z-10 py-[16px] w-fit -bottom-[40px];
+
+            &::before {
+                content: "";
+                position: absolute;
+                width: 50px;
+                height: 50px;
+                background: #DFE3F2;
+                z-index: -1;
+                right: -38px;
+                bottom: -1px;
+                border-bottom-right-radius: 50px;
+            }
+        }
+        .table-section {
+            @apply px-[36px] py-[25px] rounded-[40px] flex flex-col items-end gap-[20px];
+            
+            table {
+                border-spacing: 0 10px; /* 0 for columns, 10px for rows */
+                border-collapse: separate;
+                .text-left {
+                   text-align: left;
+                }
+                .text-center {
+                    text-align: center
+                }
+                thead {
+                    tr {
+                        @apply bg-[#1E202E];
+                        th {
+                            @apply text-white text-[16px] font-semibold px-4 py-3;
+                            &:first-child {
+                                @apply rounded-tl-[40px] rounded-bl-[40px];
+                            }
+                            &:last-child {
+                                @apply rounded-tr-[40px] rounded-br-[40px];
+                            }
+                        }
+                    }
+                }
+                tbody {
+                    tr {
+                        @apply bg-[#fff];
+                        td {
+                            @apply text-[#1E202E] text-[16px] font-semibold px-4 py-3;
+                            &:first-child {
+                                @apply rounded-tl-[40px] rounded-bl-[40px];
+                            }
+                            &:last-child {
+                                @apply rounded-tr-[40px] rounded-br-[40px];
+                            }
+                        }
+                    }
+                }   
+            }
+        }
+        .pagination-section {
+            @apply flex flex-row items-center justify-between w-full;
+            .total {
+                @apply flex flex-row items-center gap-4;
+                p {
+                    @apply font-normal text-[14px] text-[#585670];
+                }
+                select {
+                    @apply py-[5px] pl-[15px] pr-[25px] bg-[#1E202E] rounded-[100px] text-white text-[14px] w-[60px];
+                    appearance: none; /* Removes default arrow */
+                    -webkit-appearance: none; /* Safari */
+                    -moz-appearance: none; /* Firefox */
+                    background-image: url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>');
+                    background-repeat: no-repeat;
+                    background-position: right 7px center;
+                    background-size: 16px;
+                }
+            }
+        }
+        .pagination-list {
+            @apply flex flex-row items-center gap-[10px];
+            &-item {
+                @apply w-[21px] h-[21px];
+                a {
+                    @apply w-[21px] h-[21px] rounded-[50%] bg-[#DEE3F1] flex flex-row justify-center items-center text-[12px] font-normal text-[#1E202E] hover:text-white hover:bg-[#1E202E];
+                }
+            }
+            .prev, .next {
+                a {
+                    @apply bg-transparent #{!important};
+                }
+            }
+        }
+    }
+}
+
+.report-notif {
+    @apply mt-[50px] flex flex-row gap-[56px];
+    .list-notif {
+        @apply px-[36px] rounded-[40px] py-[16px] w-[790px] gap-[20px] flex flex-col justify-end items-end;
+        &-item {
+            @apply w-full flex flex-col gap-[12px];
+            &__content {
+                @apply flex flex-row gap-[29px] relative;
+                .icons {
+                    @apply flex flex-row justify-center items-center w-[30px] h-[30px] rounded-[50%] bg-[#6CC7FF] relative;
+                    &:after {
+
+                    }
+                }
+                .placement {
+                    @apply flex flex-row justify-between w-full pb-[12px] border-b border-[#A0A0BC];
+                    .title {
+                        h3 {
+                            @apply font-bold text-[16px];
+                        }
+                        .detail {
+                            @apply flex flex-row items-center gap-[23px];
+                            &-status {
+                                @apply flex flex-row items-center gap-[6px] rounded-[40px] text-white text-[12px] font-medium bg-[#009EFF] w-fit px-2 py-0.5;
+                            }
+                            &-desc {
+                                p {
+                                    @apply text-[12px] text-[#1E202E];
+                                }
+                            }
+                        }
+                    }
+                    .time {
+                        @apply flex flex-row justify-end; 
+                        &.new {
+                            span {
+                                @apply text-[#009EFF];
+                            }
+                        }
+                        span {
+                            @apply text-[12px] text-[#1E202E];
+                        }
+                    }
+                }
+            }
+            &__next {
+                a {
+                    @apply flex flex-row gap-[8px] items-center;
+                    @apply text-[#009EFF] font-medium text-[12px];
+                }
+            }
+        }
+    }
+    .report {
+        @apply max-w-[790px] w-full;
+        &-head {
+            @apply flex flex-row items-center justify-between;
+            &__selected {
+                select {
+                    @apply px-[19px] py-[10px] rounded-[50px] bg-[#1E202E] text-[16px] font-semibold text-[#fff] w-[323px];
+                    appearance: none; /* Removes default arrow */
+                    -webkit-appearance: none; /* Safari */
+                    -moz-appearance: none; /* Firefox */
+                    background-image: url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>');
+                    background-repeat: no-repeat;
+                    background-position: right 7px center;
+                    background-size: 16px;
+
+                }
+            }
+        }
+
+        &-chart {
+            &__head {
+                @apply flex flex-row items-center justify-end text-[12px] font-semibold text-[#1E202E];
+                .circle {
+                    @apply w-[25px] h-[25px] ml-[6px] bg-[#009EFF] flex flex-row justify-center items-center rounded-[50%] text-[#fff] text-[12px] font-semibold;
+                }
+            }
+            &__body {
+                @apply flex flex-row gap-[78px] items-center;
+            }
+        }
+    }
+    .notif {
+        .information {
+            @apply relative z-10 py-[16px] w-fit -bottom-[40px];
+            &::before {
+                content: "";
+                position: absolute;
+                width: 50px;
+                height: 50px;
+                background: #DFE3F2;
+                z-index: -1;
+                right: -38px;
+                bottom: -1px;
+                border-bottom-right-radius: 50px;
+            }
+        }
+    }
+}
+
+.card {
+    background: rgba(255, 255, 255, 0.7); /* Semi-transparent white */
+    backdrop-filter: blur(44px); /* Blur effect */
+    -webkit-backdrop-filter: blur(44px); /* For Safari */
+}
+
+.info {
+    @apply w-fit rounded-[100px] py-1 px-3 bg-[#DEE3F1];
+}
+.information {
+    @apply bg-[#DFE3F2];
+    &__body {
+        @apply rounded-[60px] max-w-fit pl-[12px] pr-[42px] py-[10px] flex flex-row items-center gap-[20px];
+        .icon {
+            @apply rounded-[50%] w-[50px] h-[50px] flex justify-center items-center bg-[#1E202E];
+        }
+        span {
+            @apply font-bold text-[20px] text-[#1E202E];
+        }
+        h4 {
+            @apply font-bold text-[20px] text-[#1E202E];
+        }
+    }
+    
+}

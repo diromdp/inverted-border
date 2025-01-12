@@ -33,5 +33,6 @@ module.exports = {
         },
       });
     }),
+    require('@butterfail/tailwindcss-inverted-radius'),
   ],
 };

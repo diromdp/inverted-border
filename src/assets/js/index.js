@@ -4,6 +4,7 @@ import Alpine from "alpinejs";
 // ** Initializing AlpineJs
 window.Alpine = Alpine;
 Alpine.start();
+import '../styles/style.scss';
 
 // ** Correct Window Height Issue In Different Screens and Browsers
 function appSizeFixing() {

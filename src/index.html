@@ -4,13 +4,460 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Tailwindcss+Alpinejs+Vitejs Project Starter</title>
-    <link href="./assets/css/index.css" rel="stylesheet" />
+    <title>Tester Web FE</title>
   </head>
   <body>
-    <div class="min-h-screen max-h-screen flex justify-center items-center">
-      <h1 class="text-3xl font-semibold text-slate-700">Hello world!</h1>
+    <div class="container">
+      <div class="status">
+        <div class="status_budge">
+          <div class="status_budge__title">
+            <div class="bugde">
+              Status Laporan Hari Ini
+            </div>
+          </div>
+          <div class="status_budge__desc inv-rad inv-rad-10">
+            <h4>
+              SUDAH MENGIRIMKAN
+            </h4>
+            <span>Jumat, 18 Oktober 2024</span>
+          </div>
+        </div>
+        <div class="status_table">
+          <div class="information">
+            <div class="card information__body">
+              <div class="icon">
+                <img src="./assets/images/ic-doc.png" alt="icon" />
+              </div>
+              <span>DATA STATUS PELAPORAN</span>
+            </div>
+          </div>
+          <div class="card table-section">
+            <div class="info">
+              Minggu, 27 Oktober 2024
+            </div>
+            <table>
+              <thead>
+                <tr>
+                  <th>NO</th>
+                  <th class="text-left">NAMA LAPORAN</th>
+                  <th>TGL/BLN/THN</th>
+                  <th>JAM PELAPORAN</th>
+                  <th>LIHAT</th>
+                  <th>PILIHAN</th>
+                </tr>
+              </thead>
+              <tbody class="gfg">
+                <tr>
+                  <td class="geeks">1</td>
+                  <td>Surat Keterangan Domisili</td>
+                  <td>27 Oktober 2024</td>
+                  <td class="text-center">13:00</td>
+                  <td><div class=""><img src="./assets/images/ic-search.png" alt="icon" /></div></td>
+                  <td><a href="#" class="">UNDUH</a></td> 
+                </tr>
+                <tr>
+                  <td class="geeks">2</td>
+                  <td>Surat Keterangan Domisili</td>
+                  <td>27 Oktober 2024</td>
+                  <td class="text-center">13:00</td>
+                  <td><div class=""><img src="./assets/images/ic-search.png" alt="icon" /></div></td>
+                  <td><a href="#" class="">UNDUH</a></td> 
+                </tr>
+                <tr>
+                  <td class="geeks">3</td>
+                  <td>Surat Keterangan Domisili</td>
+                  <td>27 Oktober 2024</td>
+                  <td class="text-center">13:00</td>
+                  <td><div class=""><img src="./assets/images/ic-search.png" alt="icon" /></div></td>
+                  <td><a href="#" class="">UNDUH</a></td> 
+                </tr>
+              </tbody>
+            </table>
+            <div class="pagination-section">
+              <div class="total">
+                <p>Menampilkan 1 hingga 5 dari 14 baris</p>
+                <select>
+                  <option value="">5</option>
+                  <option value="">10</option>
+                  <option value="">15</option>
+                </select>
+                <p>Baris per halaman</p>
+              </div>
+              <div class="pagination-list">
+                <div class="pagination-list-item prev">
+                  <a href="#">
+                    <img src="./assets/images/ic-left.png" alt="icon" />
+                  </a>
+                </div>
+                <div class="pagination-list-item"><a href="#">1</a></div>
+                <div class="pagination-list-item"><a href="#">2</a></div>
+                <div class="pagination-list-item"><a href="#">3</a></div>
+                <div class="pagination-list-item"><a href="#">4</a></div>
+                <div class="pagination-list-item"><a href="#">5</a></div>
+                <div class="pagination-list-item next">
+                  <a href="#">
+                    <img src="./assets/images/ic-right.png" alt="icon" />
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="report-notif">
+        <div class="report">
+          <div class="report-head">
+            <div class="report-head__title information">
+              <div class="card information__body">
+                <div class="icon">
+                  <img src="./assets/images/ic-chart.png"/>
+                </div>
+                <div class="desc ">
+                  <h4>TOTAL LAPORAN</h4>
+                  <p>Data Laporan Harian Setiap POLRES</p>
+                </div>
+              </div>
+            </div>
+            <div class="report-head__selected">
+              <select>
+                <option>
+                  OPERASI ZEBRA (HARI KE 1)
+                </option>
+                <option>
+                  OPERASI ZEBRA (HARI KE 2)
+                </option>
+                <option>
+                  OPERASI ZEBRA (HARI KE 3)
+                </option>
+                <option>
+                  OPERASI ZEBRA (HARI KE 4)
+                </option>
+              </select>
+            </div>
+          </div>
+          <div class="report-chart">
+            <div class="report-chart__head">
+              TOTAL OPERASI HARI INI : <span class="circle">3</span>
+            </div>
+            <div class="report-chart__body">
+              <div id="chart-port"></div>
+              <div id="chart-polda"></div>
+            </div>
+          </div>
+        </div>
+        <div class="notif">
+          
+          <div class="information">
+            <div class="card information__body">
+              <div class="icon">
+                <img src="./assets/images/ic-notif.png" alt="notif"/>
+              </div>
+              <div class="desc">
+                <h4>NOTIFIKASI</h4>
+                <p>Info Laporan Setiap POLRES</p>
+              </div>
+            </div>
+          </div>
+          <div class="card list-notif">
+            <div class="info">
+              MINGGU, 27 OKTOBER 2024
+            </div>
+            <div class="list-notif-item">
+                <div class="list-notif-item__content">
+                  <div class="icons">
+                    <img src="./assets/images/ic-polda.png" alt="icon" />
+                  </div>
+                  <div class="placement">
+                    <div class="title">
+                      <h3>PORLES JAKARTA PUSAT</h3>
+                      <div class="detail">
+                        <div class="detail-status">
+                          <span>Status</span>
+                          <img src="./assets/images/ic-check.png" alt="icon" />
+                        </div>
+                        <div class="detail-desc">
+                          <p>Sudah Mengirimkan Laporan Operasi Zebra 2024</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="time new">
+                      <span>BARU SAJA</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="list-notif-item__content">
+                  <div class="icons">
+                    <img src="./assets/images/ic-polda.png" alt="icon" />
+                  </div>
+                  <div class="placement">
+                    <div class="title">
+                      <h3>PORLES JAKARTA PUSAT</h3>
+                      <div class="detail">
+                        <div class="detail-status">
+                          <span>Status</span>
+                          <img src="./assets/images/ic-check.png" alt="icon" />
+                        </div>
+                        <div class="detail-desc">
+                          <p>Sudah Mengirimkan Laporan Operasi Zebra 2024</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="time">
+                      <span>10 Menit yang lalu</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="list-notif-item__content">
+                  <div class="icons">
+                    <img src="./assets/images/ic-polda.png" alt="icon" />
+                  </div>
+                  <div class="placement">
+                    <div class="title">
+                      <h3>PORLES JAKARTA PUSAT</h3>
+                      <div class="detail">
+                        <div class="detail-status">
+                          <span>Status</span>
+                          <img src="./assets/images/ic-check.png" alt="icon" />
+                        </div>
+                        <div class="detail-desc">
+                          <p>Sudah Mengirimkan Laporan Operasi Zebra 2024</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="time">
+                      <span>15 Menit yang lalu</span>
+                    </div>
+                  </div>
+                </div>
+            </div>
+            <div class="list-notif-item__next">
+              <a href="#">
+                <span>Lihat Semua</span>
+                <img src="./assets/images/ic-right-blue.png" alt="icon" />
+              </a>
+            </div>      
+          </div>
+        </div>
+      </div>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
     <script src="./assets/js/index.js" type="module"></script>
+    <script type="text/javascript">
+      var optionPorles = {
+          series: [3000, 400],
+          colors: ['#009EFF', '#F91A0B'],
+          chart: {
+              type: 'donut',
+              fontFamily: '"Albert Sans", sans-serif',
+              offsetY: 30,
+              width: 350, // Set chart width
+              height: 350, // Set chart height
+          },
+          labels: ['Belum Masuk', 'Masuk'],
+          plotOptions: {
+              pie: {
+                  stroke: {
+                      width: 0 // Remove stroke
+                  },
+                  dataLabels: {
+                      offset: 10, // Space between label and the slice
+                  },
+                  dataLabels: {
+                      offset: 10, // Space between label and the slice
+                  },
+                  expandOnClick: false,
+                  hover: {
+                      size: 10, // Set the hover size to create a pop effect
+                      // Custom styles on hover
+                      shadow: {
+                          enabled: true,
+                          color: '#000', // Shadow color
+                          opacity: 0.5, // Shadow opacity
+                          blur: 10, // Blur amount
+                          left: 5, // Horizontal shadow offset
+                          top: 5 // Vertical shadow offset
+                      }
+                  },
+                  cornerRadius: 80,
+                  donut: {
+                      size: '70%',
+                      customScale: 0.9,
+                     
+                      labels: {
+                          show: true,
+                          name: {
+                              show: true,
+                              fontWeight: 700,
+                              fontSize: '14px',
+                              color: "#666C73",
+                              offsetY: -10,
+                              fontFamily: '"Albert Sans", sans-serif',
+
+                          },
+                          value: {
+                              show: true,
+                              fontWeight: 700,
+                              fontSize: '32px',
+                              color: "#111",
+                              offsetY: 10,
+                              fontFamily: '"Albert Sans", sans-serif',
+                              formatter: (val) => {
+                                  let number = parseInt(val);
+                                  return `${number.toLocaleString('en-GB', {
+                                      minimumFractionDigits: 0,
+                                      maximumFractionDigits: 0,
+                                  }).replace(/,/g, ".")}`;
+                              }
+                          },
+                          total: {
+                              show: true,
+                              label: "DATA MASUK",
+                              formatter: () => {
+                                  let number = parseInt(5000);
+                                  return `${number.toLocaleString('en-GB', {
+                                      minimumFractionDigits: 0,
+                                      maximumFractionDigits: 0,
+                                  }).replace(/,/g, ".")}`;
+                              }
+                          }
+                      },
+                  }
+              }
+          },
+          stroke: {
+              width: 0, // Set the stroke width here
+          },
+          dataLabels: {
+              enabled: false,
+          },
+          legend: {
+              show: true,
+              fontSize: '12px',
+              fontFamily: '"Albert Sans", sans-serif',
+              position: 'bottom', // Set legend position to bottom
+              horizontalAlign: 'center', // Align legend items horizontally
+              fontWeight: 700,
+              width: '186px',
+              formatter: function (label, opts) {
+              const total = opts.w.globals.series.reduce((acc, curr) => acc + curr, 0);
+              const percentage = ((opts.w.globals.series[opts.seriesIndex] / total) * 100).toFixed(2) + '%';
+                  return `<div class="legend-apex">
+                              <span class="legend-label">${label}</span>
+                              <span class="legend-percent">${percentage}</span>
+                          </div>`;
+              }
+          },
+      };
+      var optionPolda = {
+          series: [3000, 400],
+          colors: ['#009EFF', '#F91A0B'],
+          chart: {
+              type: 'donut',
+              fontFamily: '"Albert Sans", sans-serif',
+              offsetY: 30,
+              width: 350, // Set chart width
+              height: 350, // Set chart height
+          },
+          labels: ['Belum Masuk', 'Masuk'],
+          plotOptions: {
+              pie: {
+                  stroke: {
+                      width: 0 // Remove stroke
+                  },
+                  dataLabels: {
+                      offset: 10, // Space between label and the slice
+                  },
+                  dataLabels: {
+                      offset: 10, // Space between label and the slice
+                  },
+                  expandOnClick: false,
+                  hover: {
+                      size: 10, // Set the hover size to create a pop effect
+                      // Custom styles on hover
+                      shadow: {
+                          enabled: true,
+                          color: '#000', // Shadow color
+                          opacity: 0.5, // Shadow opacity
+                          blur: 10, // Blur amount
+                          left: 5, // Horizontal shadow offset
+                          top: 5 // Vertical shadow offset
+                      }
+                  },
+                  cornerRadius: 80,
+                  donut: {
+                      size: '70%',
+                      customScale: 0.9,
+                     
+                      labels: {
+                          show: true,
+                          name: {
+                              show: true,
+                              fontWeight: 700,
+                              fontSize: '14px',
+                              color: "#666C73",
+                              offsetY: -10,
+                              fontFamily: '"Albert Sans", sans-serif',
+
+                          },
+                          value: {
+                              show: true,
+                              fontWeight: 700,
+                              fontSize: '32px',
+                              color: "#111",
+                              offsetY: 10,
+                              fontFamily: '"Albert Sans", sans-serif',
+                              formatter: (val) => {
+                                  let number = parseInt(val);
+                                  return `${number.toLocaleString('en-GB', {
+                                      minimumFractionDigits: 0,
+                                      maximumFractionDigits: 0,
+                                  }).replace(/,/g, ".")}`;
+                              }
+                          },
+                          total: {
+                              show: true,
+                              label: "DATA MASUK",
+                              formatter: () => {
+                                  let number = parseInt(5000);
+                                  return `${number.toLocaleString('en-GB', {
+                                      minimumFractionDigits: 0,
+                                      maximumFractionDigits: 0,
+                                  }).replace(/,/g, ".")}`;
+                              }
+                          }
+                      },
+                  }
+              }
+          },
+          stroke: {
+              width: 0, // Set the stroke width here
+          },
+          dataLabels: {
+              enabled: false,
+          },
+          legend: {
+              show: true,
+              fontSize: '12px',
+              fontFamily: '"Albert Sans", sans-serif',
+              position: 'bottom', // Set legend position to bottom
+              horizontalAlign: 'center', // Align legend items horizontally
+              fontWeight: 700,
+              width: '186px',
+              formatter: function (label, opts) {
+              const total = opts.w.globals.series.reduce((acc, curr) => acc + curr, 0);
+              const percentage = ((opts.w.globals.series[opts.seriesIndex] / total) * 100).toFixed(2) + '%';
+                  return `<div class="legend-apex">
+                              <span class="legend-label">${label}</span>
+                              <span class="legend-percent">${percentage}</span>
+                          </div>`;
+              }
+          },
+      };
+      var chartPorles = new ApexCharts(document.querySelector("#chart-port"), optionPorles);
+      var chartPolda = new ApexCharts(document.querySelector("#chart-polda"), optionPolda);
+
+      chartPorles.render();
+      chartPolda.render();
+  </script>
   </body>
 </html>
